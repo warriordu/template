@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>3css3进度条小动画</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		html::-webkit-scrollbar {display:none}
+		img{width: 100%}
+		.loading{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 100;
+			background-color: white; 
+		}
+		.loading .pic{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.loading .pic i{
+			display: block;
+			float: left;
+			width: 6px;
+			height: 50px;
+			background-color: #ccc;
+			margin: 0 2px; 
+			-webkit-transform: scaleY(0.4); 
+			    -ms-transform: scaleY(0.4); 
+			        transform: scaleY(0.4);
+			-webkit-animation: load 1.2s infinite;
+			        animation: load 1.2s infinite;
+		}
+		.loading .pic i:nth-child(2){-webkit-animation-delay: 0.1s;animation-delay: 0.1s;}
+		.loading .pic i:nth-child(3){-webkit-animation-delay: 0.2s;animation-delay: 0.2s;}
+		.loading .pic i:nth-child(4){-webkit-animation-delay: 0.3s;animation-delay: 0.3s;}
+		.loading .pic i:nth-child(5){-webkit-animation-delay: 0.4s;animation-delay: 0.4s;}
+
+		@-webkit-keyframes load{
+			0%,40%,100%{-webkit-transform: scaleY(0.4);transform: scaleY(0.4);}
+			20%{-webkit-transform: scaleY(1);transform: scaleY(1);}
+		}
+
+		@keyframes load{
+			0%,40%,100%{-webkit-transform: scaleY(0.4);transform: scaleY(0.4);}
+			20%{-webkit-transform: scaleY(1);transform: scaleY(1);}
+		}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="pic">
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+	</div>
+
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533804039026&di=678c26b8b0790ab321f95c23eafc1642&imgtype=0&src=http%3A%2F%2Fimg3.iqilu.com%2Fdata%2Fattachment%2Fforum%2F201205%2F31%2F233931ok9duaok49ls0lm7.jpg" alt="">
+	<img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1373211857,1156505994&fm=27&gp=0.jpg" alt="">
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533804089241&di=a091d4a8b873370995b0436a7c146a19&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2017-10-16%2F59e42595c9e47.jpg" alt="">
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534398817&di=c86c57769d9ea8ad5f5f0064d13e0be5&imgtype=jpg&er=1&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201604%2F06%2F093035t5f2n9n776qy7993.jpg" alt="">
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534398826&di=b53900890b605b5fa5929b93bfb6b2c1&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.tuku.cn%2Ffile_thumb%2F201501%2Fm2015013000124485.jpg" alt="">
+	<img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4287917733,3817507956&fm=27&gp=0.jpg" alt="">
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533804039026&di=678c26b8b0790ab321f95c23eafc1642&imgtype=0&src=http%3A%2F%2Fimg3.iqilu.com%2Fdata%2Fattachment%2Fforum%2F201205%2F31%2F233931ok9duaok49ls0lm7.jpg" alt="">
+	<img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1373211857,1156505994&fm=27&gp=0.jpg" alt="">
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533804089241&di=a091d4a8b873370995b0436a7c146a19&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2017-10-16%2F59e42595c9e47.jpg" alt="">
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534398817&di=c86c57769d9ea8ad5f5f0064d13e0be5&imgtype=jpg&er=1&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201604%2F06%2F093035t5f2n9n776qy7993.jpg" alt="">
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534398826&di=b53900890b605b5fa5929b93bfb6b2c1&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.tuku.cn%2Ffile_thumb%2F201501%2Fm2015013000124485.jpg" alt="">
+	<img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4287917733,3817507956&fm=27&gp=0.jpg" alt="">
+
+	
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		document.onreadystatechange = function(){
+			if(document.readyState == "complete"){
+				$('.loading').fadeOut();
+				// 这里写你要做的事
+			}
+		}
+
+		// 通过加载状态事件制作进度条
+
+		// document.onreadystatechange 	页面加载状态改变时的时间
+
+		// document.readyState 			返回当前文档状态
+		// 	1、uninitialized 	还未开始载入
+		// 	2、loading			载入中
+		// 	3、interactive 		已加载，文档与用户可以开始交互
+		// 	4、complete 			载入完成
+	</script>
+</body>
+</html>
